@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Password Manager</h1>
+  <div id="users">
+    <div id="filter">
+      <section>
+        <input class="search" placeholder="Search" />
+      </section>
+      <section>
+         <a href="/passwords/new"><i class="fa fa-eye-slash fa-lg" aria-hidden="true"></i></a>  |
+         <a href="/passwords/new"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+      </section>
+    </div>
+
+    <table id="myTable" class="tablesorter">
+      <tr>
+        <th><button class="sort" data-sort="email">E-mail</button></th>
+        <th><button class="sort" data-sort="username">Username</button></th>
+        <th><button class="sort" data-sort="password">Password</button></th>
+        <th><button class="sort" data-sort="pin">Pin</button></th>
+        <th><button class="sort" data-sort="category">Category</button></th>
+        <th><button class="sort" data-sort="company">Company</button></th>
+        <th><button class="sort" data-sort="pay_subscription">Pay or Free</button></th>
+        <th>View Account</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <!-- IMPORTANT, class="list" have to be at tbody -->
+      <tbody class="list">
+      {{#each passwords}}
+        <tr>
+          <td class="email">{{email}}</td>
+          <td class="username">{{username}}</td>
+          <td class="password">{{password}}</td>
+          <td class="pin">{{pin}}</td>
+          <td class="category">{{category}}</td>
+          <td class="company"><a href='{{company_url}}'>{{company}}</a></td>
+          <td class="pay_subscription">
+            {{#if password.pay_subscription}}
+               Pay
+            {{else}}
+               Free
+            {{/if}}
+          </td>
+          <td><a href='/passwords/{{_id}}'>{{_id}}</a></td>
+          <td><a href='/passwords/{{_id}}/edit'><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a></td>
+          <td class="inline-btn">
+            <form action='/passwords/{{_id}}/edit' method='post' enctype='application/x-www-form-urlencoded'>
+              <input type='hidden' value='DELETE' name='_method'>
+              <button type='submit' class="btn-delete"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

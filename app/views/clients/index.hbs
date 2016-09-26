@@ -1,0 +1,35 @@
+<div class="container">
+  <a href="/clients/new">New Client</a>
+  <div id="users">
+    <input class="search" placeholder="Search" />
+    <button class="sort" data-sort="done">Finish:</button>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>E-mail</th>
+        <th>Project Summary</th>
+        <th>View Account</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <!-- IMPORTANT, class="list" have to be at tbody -->
+      <tbody class="list">
+      {{#each clients}}
+        <tr>
+          <td class="company">{{company}}</td>
+          <td class="email">{{email}}</td>
+          <td class="summary">{{project_summary}}</td>
+          <td class="id"><a href='/clients/{{_id}}'>{{_id}}</a></td>
+          <td><a href='/clients/{{_id}}/edit'>Edit</a></td>
+          <td class="inline-btn">
+            <form action='/clients/{{_id}}/edit' method='post' enctype='application/x-www-form-urlencoded'>
+              <input type='hidden' value='DELETE' name='_method'>
+              <button type='submit'>Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

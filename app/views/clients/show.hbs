@@ -1,0 +1,14 @@
+<div class="container">
+ <h1>{{client._id}}</h1>
+ <p><strong>Name: </strong>{{client.name}}</p>
+ <p><strong>Company: </strong>{{client.company}}</p>
+ <p><strong>Position: </strong>{{client.position}}</p>
+ <p><strong>Number: </strong>{{client.contact_number}}</p>
+ <p><strong>Email: </strong>{{client.email}}</p>
+ <p><strong>Project Summary: </strong>{{client.project_summary}}</p>
+ <p><strong>Task List: </strong>{{client.task_list}}</p>
+ <p><strong>Created At: </strong>{{client.created_at}}</p>
+
+ <a href='/clients/{{client._id}}/edit'>Edit</a>
+ <a href='/clients/'>Home</a>
+</div>

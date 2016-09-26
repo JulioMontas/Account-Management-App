@@ -1,0 +1,24 @@
+<div class="container">
+ <h1>{{password._id}}</h1>
+ <p><strong>username: </strong>{{password.username}}</p>
+ <p><strong>Email: </strong>{{password.email}}</p>
+ <p><strong>password: </strong>{{password.password}}</p>
+ <p><strong>pin: </strong>{{password.pin}}</p>
+ <p><strong>Company: </strong>{{password.company}}</p>
+ <p><strong>Company URL: </strong>{{password.company_url}}</p>
+ <p><strong>Category: </strong>{{password.category}}</p>
+ <p><strong>Summary: </strong>{{password.summary}}</p>
+ <p><strong>Note: </strong>{{password.task_list}}</p>
+ <p><strong>Pay or Free?</strong>
+  {{#if password.pay_subscription}}
+     Pay
+  {{else}}
+     Free
+  {{/if}}
+ </p>
+ <p><strong>Year Made: </strong>{{password.year}}</p>
+ <p><strong>Created At: </strong>{{password.created_at}}</p>
+ <p><strong>Updated At: </strong>{{password.updated_at}}</p>
+ <a href='/passwords/{{password._id}}/edit'>Edit</a>
+ <a href='/passwords/'>Home</a>
+</div>

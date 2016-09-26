@@ -1,0 +1,17 @@
+   <div class="constrainBox">
+          <h1>ID: {{password._id}}</h1>
+     <form action='/passwords/{{password._id}}/edit' method='post' name='updateblob' enctype='application/x-www-form-urlencoded'>
+
+       <p>Name: <input type="text" id="inputName" value='{{password.name}}' name="name"></p>
+       <p>Company: <input type="text" id="inputCompany" value='{{password.company}}' name="company"></p>
+       <p>Position: <input type="text" id="inputPosition" value='{{password.position}}' name="position"></p>
+       <p>Number: <input type="number" id="inputContactNumber" value='{{password.contact_number}}' name="contact_number"></p>
+       <p>E-Mail: <input type="text" id="inputEmail" value='{{password.email}}' name="email"></p>
+       <p>Project Summary: <input type="text" id="inputProjectSummary" value='{{password.project_summary}}'  name="project_summary"></p>
+       <p>Task List: <input type="text" id="inputTaskList" value='{{password.task_list}}' name="task_list"></p>
+       <p>Created At: <input type="date" id="inputCreatedAt" value='{{passwordcreated_at}}' name="created_at"></p>
+
+       <p><input type="hidden" value="PUT" name="_method"></p>
+       <p><button id="btnSubmit" type="submit">Update</button></p>
+    </form>
+   </div>

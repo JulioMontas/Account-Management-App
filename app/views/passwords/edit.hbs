@@ -1,0 +1,21 @@
+   <div class="constrainBox">
+          <h1>ID: {{password._id}}</h1>
+     <form action='/passwords/{{password._id}}/edit' method='post' name='updateblob' enctype='application/x-www-form-urlencoded'>
+       <p>Company: <input type="text" id="inputCompany" value='{{password.company}}' name="company"></p>
+       <p>Company URL: <input type="text" id="inputCompany" value='{{password.company_url}}' name="company"></p>
+       <p>Username: <input type="text" id="inputUsername" value='{{password.name}}' name="name"></p>
+       <p>E-Mail: <input type="text" id="inputEmail" value='{{password.email}}' name="email"></p>
+       <p>E-Password: <input type="text" id="inputPassword" value='{{password.password}}' name="password"></p>
+       <p>Pin: <input type="number" id="inputPin" value='{{password.pin}}' name="pin"></p>
+       <p>Category: <input type="text" id="inputCategory" value='{{password.category}}' name="category"></p>
+       <p>Summary: <input type="text" id="inputSummary" value='{{password.summary}}'  name="_summary"></p>
+       <p>Notes: <input type="text" id="inputTaskList" value='{{password.task_list}}' name="task_list"></p>
+       <p>Pay or Free:
+         <input type="checkbox" id="inputDoneWithClient" name='done_with_client' {{#if password.pay_subscription}}checked="checked"{{/if}}
+       </p>
+       <p>Created At: <input type="date" id="inputCreatedAt" value='{{passwordcreated_at}}' name="created_at"></p>
+       <p>Updated At: <input type="date" id="inputUpdatedAt" value='{{passwordupdated_at}}' name="updated_at"></p>
+       <p><input type="hidden" value="PUT" name="_method"></p>
+       <p><button id="btnSubmit" type="submit">Update</button></p>
+    </form>
+   </div>
