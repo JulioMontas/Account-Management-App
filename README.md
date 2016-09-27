@@ -13,7 +13,7 @@ Info | Info | Info
 Invoices Generator | Copy & paste | Personal or Client
 Estimates Generator | Screen View Protected | Time Tracker
 Expenses Generator | Account Activity  | Timeline Calender
-Proposals Generator | |
+Proposals Generator | | Roadmap / Moodboard IMG
 
 #### Clients Info
 - title: String,
@@ -69,3 +69,23 @@ Proposals Generator | |
 #### IV
 [ ] Deploy it to Heroku
 [ ] Usability Testing
+
+
+#### What I'm trying to make.
+1. Task Management for freelancers and business
+ Password List
+ Client List
+ Project List
+
+2. Task Management for starting projects:
+  Project Overview
+  User Flows
+  Information Architecture
+  Personas
+  Sketches
+  Wireframes & Prototypes
+  Usability Testing Results
+  High Fidelity Prototype
+
+#### Thinks to do LATER
+  - brainstorming text can get generator from the images of the moodboard
