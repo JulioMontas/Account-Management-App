@@ -31,7 +31,8 @@ router.route('/')
                       //HTML response will render the index.jade file in the views/passwords folder. We are also setting "passwords" to be an accessible variable in our ejs view
                     html: function(){
                         res.render('passwords/index', {
-                              title: 'All my passwords',
+                              title: 'Password Manager',
+                              summary: 'Organize and search for seeking PW',
                               "passwords" : passwords
                           });
                     },

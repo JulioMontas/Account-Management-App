@@ -1,7 +1,43 @@
+@import reset
+
 body
   background: #252830
   color: white
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+
+header
+  border-bottom: 1px solid #434857
+  width: 100%
+
+header
+  nav
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  nav ul
+   display: inline-flex
+  nav ul li a
+    border-left: 1px solid #434857
+    display: block
+    padding: 20px
+  nav ul li a:hover
+    background: #434857
+  nav ul li a:first-child
+    border-left: none
+    border-right: 1px solid #434857
+  nav ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)
+    border-left: 1px solid #434857
+    border-right: 1px solid #434857
+pre
+  margin-left: 40px
+
+
+
+.container
+  width: 95%
+  margin: 0 auto
+
+/* Typography
 
 a
   color: #28a8e0
@@ -10,32 +46,36 @@ a
 a:hover
   color: #1b8aba
 
+h1
+  font-size: 1.5em
+  font-weight: lighter
+  letter-spacing: 3px
+  padding: 40px 0 0
+  text-transform: uppercase
 
-.password,
-.pin
-  transition: filter 0.3s ease
-  filter: blur(6px)
 
-.password:hover,
-.pin:hover
-  filter: blur(0px)
-
-.container
-  width: 95%
-  margin: 0 auto
-
+/* UI Elements
 
 .btn-delete
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0
     border: medium none
     color: #d44950
 
-h1
-    font-weight: lighter
-    letter-spacing: 3px
-    padding: 40px 0 0
-    text-transform: uppercase
-    text-align: center
+.center
+  text-align: center
+
+/* Blur Text effect
+.password,
+.pin,
+.email_blur
+  transition: filter 0.3s ease
+  filter: blur(6px)
+
+.password:hover,
+.pin:hover,
+.email_blur:hover
+  filter: blur(0px)
+
 
 
 section
@@ -67,7 +107,6 @@ td, th
 tr:nth-child(even)
     background: #1e2127
     transition: background-color 0.3s ease
-
 
 tbody:nth-child(1) > tr:nth-child(1):hover
   background: none

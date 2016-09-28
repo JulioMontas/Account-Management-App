@@ -1,13 +1,27 @@
 <div class="container">
-  <a href="/clients/new">New Client</a>
+
+  <div class="center">
+    <h1>{{title}}</h1>
+    <p>{{summary}}</p>
+  </div>
+
   <div id="users">
-    <input class="search" placeholder="Search" />
-    <button class="sort" data-sort="done">Finish:</button>
-    <table>
+
+    <div id="filter">
+      <section>
+        <input class="search" placeholder="Search" />
+      </section>
+      <section>
+         <a href="/clients/new"><i class="fa fa-eye-slash fa-lg" aria-hidden="true"></i></a>  |
+         <a href="/clients/new"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+      </section>
+    </div>
+
+    <table id="myTable" class="tablesorter">
       <tr>
-        <th>Company</th>
-        <th>E-mail</th>
-        <th>Project Summary</th>
+        <th><button class="sort" data-sort="done">Company</button></th>
+        <th><button class="sort" data-sort="done">E-mail</button></th>
+        <th><button class="sort" data-sort="done">Project Summary</button></th>
         <th>View Account</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -17,14 +31,14 @@
       {{#each clients}}
         <tr>
           <td class="company">{{company}}</td>
-          <td class="email">{{email}}</td>
+          <td class="email_blur">{{email}}</td>
           <td class="summary">{{project_summary}}</td>
           <td class="id"><a href='/clients/{{_id}}'>{{_id}}</a></td>
-          <td><a href='/clients/{{_id}}/edit'>Edit</a></td>
+          <td><a href='/clients/{{_id}}/edit'><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a></td>
           <td class="inline-btn">
             <form action='/clients/{{_id}}/edit' method='post' enctype='application/x-www-form-urlencoded'>
               <input type='hidden' value='DELETE' name='_method'>
-              <button type='submit'>Delete</button>
+              <button type='submit' class="btn-delete"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
             </form>
           </td>
         </tr>

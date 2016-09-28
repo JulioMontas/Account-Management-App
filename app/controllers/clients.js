@@ -31,7 +31,8 @@ router.route('/')
                       //HTML response will render the index.jade file in the views/clients folder. We are also setting "clients" to be an accessible variable in our ejs view
                     html: function(){
                         res.render('clients/index', {
-                              title: 'All my clients',
+                              title: 'Clients',
+                              summary: 'Keep your contact with you.',
                               "clients" : clients
                           });
                     },

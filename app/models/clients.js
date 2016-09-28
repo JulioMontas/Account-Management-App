@@ -4,6 +4,7 @@ var clientSchema = new mongoose.Schema({
   company: String,
   position: String,
   email: String,
+  rate: Number,
   contact_number: Number,
   project_summary: String,
   task_list: [String],
