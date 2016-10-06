@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Account Management App' });
+  res.render('index', { title: 'Project Management Framework ' });
 });
 
 module.exports = router;

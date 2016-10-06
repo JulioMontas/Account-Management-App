@@ -1,0 +1,27 @@
+   <div class="constrainBox">
+        <h1>{{title}}</h1>
+    <form id="formAddprices" name="addprices" method="post" action="/prices">
+      <p>Skill:<input type="text" id="inputSkill" placeholder="Google" name="skill"></p>
+      <p>perProjectHigh:<input type="number" id="inputperProjectHigh" placeholder="10000" step="50" value="5000" name="perProjectHigh"></p>
+      <p>perProjectLow:<input type="number" id="inputperProjectLow" placeholder="1500" step="50" value="1500" name="perProjectLow"></p>
+      <p>perHourHigh:<input type="number" id="inputperHourHigh" placeholder="40" step="5" value="40" name="perHourHigh"></p>
+      <p>perHourLow:<input type="number" id="inputperHourLow" placeholder="25" step="5" value="25" name="perHourLow"></p>
+      <p>Category:
+      <select id="inputCategory" name="category">
+        <option value="Graphic Design">Graphic Design</option>
+        <option value="Print">Print</option>
+        <option value="UX Design">UX Design</option>
+        <option value="UI Design">UI Design</option>
+        <option value="Front-End Development">Front-End Development</option>
+        <option value="Back-End Development">Back-End Development</option>
+        <option value="Full-Stack Development">Full-Stack Development</option>
+        <option value="Creative Coding">Creative Coding</option>
+        <option value="Social Media">Social Media</option>
+        <option value="Photography">Photography</option>
+      </select>
+      </p>
+      <p>Created At:<input type="date" id="inputCreatedAt" name="created_at"></p>
+      <p>Updated At:<input type="date" id="inputUpdatedAt"  name="updated_at"></p>
+      <p><button type="submit" id="btnSubmit">submit</button></p>
+    </form>
+   </div>
